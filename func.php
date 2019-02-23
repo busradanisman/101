@@ -27,6 +27,16 @@ try {
 */
         return $data;
     }
+    function duzenle ($id) {
+        global $conn;
+        $data = $conn->query("SELECT * FROM yazilar WHERE id=".$id)->fetch();
+/*
+        foreach ($data as $row) {
+            echo $row['baslik']."<br />\n";
+        }
+*/
+        return $data;
+    }
 
     function sil ($id) {
         global $conn;
